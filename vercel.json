@@ -1,6 +1,11 @@
 {
     "buildCommand": "cd client && npm install && npm run build",
     "outputDirectory": "client/dist",
+    "functions": {
+      "api/*.go": {
+        "runtime": "go1.x"
+      }
+    },
     "rewrites": [
       {
         "source": "/api/(.*)",
