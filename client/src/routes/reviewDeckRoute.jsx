@@ -11,6 +11,7 @@ const ReviewDeckRoute = ({deckID}) => {
 
     React.useEffect(() => {
         axios.get(url).then((response) => {
+            console.log('reviewDeckRoute.jsx url response: ', response)
             setDeckInfo(response.data)
         })
     }, [url])

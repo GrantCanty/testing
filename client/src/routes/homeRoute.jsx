@@ -14,10 +14,12 @@ function HomeRoute(props) {
 
   React.useEffect(() => {
     axios.get(userDataUrl).then((response) => {
+      console.log('homeRoute.jsx userDataUrl response: ', response)
       setUserData(response.data)
     })
 
     axios.get(occupationsDataUrl).then((response) => {
+      console.log('homeRoute.jsx occupationsDataUrl response: ', response)
       setOccupation(response.data)
     })
   }, [])
@@ -28,6 +30,7 @@ function HomeRoute(props) {
 
   React.useEffect(() => {
     axios.get(deckDataUrl).then((response) => {
+      console.log('homeRoute.jsx deckDataUrl response: ', response)
       setDeckData(response.data)
     })
   }, [])
