@@ -3,17 +3,8 @@
     "outputDirectory": "client/dist",
     "functions": {
       "api/*.go": {
-        "runtime": "go1.x"
+        "runtime": "vercel-go@1.0.0"
       }
-    },
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/api/$1"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
-    ]
+    }
   }
+  
