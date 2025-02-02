@@ -14,50 +14,27 @@ func init() {
 	ctx = ac.NewAppContext()
 }
 
-func main() {
-	http.HandleFunc("/api/decks", handleDecks)
-	http.HandleFunc("/api/deck/", handleDeck)
-	http.HandleFunc("/api/deckcount", handleDeckCount)
-	http.HandleFunc("/api/user", handleUser)
-	http.HandleFunc("/api/occupations", handleOccupations)
-
-	http.ListenAndServe(":3000", nil)
-}
-
-func handleDecks(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
 	path := strings.TrimPrefix(r.URL.Path, "/api/")
 
-	if path == "decks" && r.Method == "GET" {
+	switch {
+	case path == "decks" && r.Method == "GET":
 		routes.GetDeckTitles(&ctx)(w, r)
-	}
-}
-
-func handleDeck(w http.ResponseWriter, r *http.Request) {
-	path := strings.TrimPrefix(r.URL.Path, "/api/")
-	
-	if strings.HasPrefix(path, "deck/") && r.Method == "GET" {
+	case strings.HasPrefix(path, "deck/") && r.Method == "GET":
 		routes.GetDeck(&ctx)(w, r)
-	} else if strings.HasPrefix(path, "deck/") && r.Method == "POST" {
+	case strings.HasPrefix(path, "deck/") && r.Method == "POST":
 		routes.EditDeck(&ctx)(w, r)
-	} else if path == "deck/" && r.Method == "POST" {
+	case path == "deck/" && r.Method == "POST":
 		routes.AddDeck(&ctx)(w, r)
-	}
-}
-
-func handleDeckCount(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "GET" {
+	case path == "deckcount" && r.Method == "GET":
 		routes.GetDeckLength(&ctx)(w, r)
-	}
-}
-
-func handleUser(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "GET" {
+	case path == "user" && r.Method == "GET":
 		routes.GetProfileData(&ctx)(w, r)
+	case path == "occupations" && r.Method == "GET":
+		routes.GetOccupations(&ctx)(w, r)
+	default:
+		http.NotFound(w, r)
+		return
 	}
 }
 
-func handleOccupations(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "GET" {
-		routes.GetOccupations(&ctx)(w, r)
-	}
-}
