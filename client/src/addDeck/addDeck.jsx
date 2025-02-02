@@ -2,8 +2,8 @@ import React from 'react'
 import axios from 'axios'
 
 const AddDeck =({showAddDeck, toggleShowAddDeck}) => {
-
-    const url = "http://localhost:8080/api/deck/"
+    const url = (import.meta.env.VITE_API_URL || '') + '/api/deck';
+    //const url = "http://localhost:8080/api/deck/"
 
     const [deckName, setDeckName] = React.useState("")
 

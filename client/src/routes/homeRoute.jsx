@@ -4,8 +4,10 @@ import axios from 'axios'
 import './main.css'
 
 function HomeRoute(props) {
-  const userDataUrl = 'http://localhost:8080/api/user'
-  const occupationsDataUrl = 'http://localhost:8080/api/occupations'
+  const userDataUrl = (import.meta.env.VITE_API_URL || '') + '/api/user';
+  const occupationsDataUrl = (import.meta.env.VITE_API_URL || '') + '/api/occupations';
+  //const userDataUrl = 'http://localhost:8080/api/user'
+  //const occupationsDataUrl = 'http://localhost:8080/api/occupations'
 
   const [userData, setUserData] = React.useState(new Map())
   const [occupation, setOccupation] = React.useState([])
@@ -20,7 +22,8 @@ function HomeRoute(props) {
     })
   }, [])
 
-  const deckDataUrl = 'http://localhost:8080/api/deckcount'
+  //const deckDataUrl = 'http://localhost:8080/api/deckcount'
+  const deckDataUrl = (import.meta.env.VITE_API_URL || '') + '/api/deckcount';
   const [deckData, setDeckData] = React.useState(Number)
 
   React.useEffect(() => {

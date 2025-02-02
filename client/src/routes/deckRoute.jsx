@@ -7,7 +7,9 @@ import './main.css'
 import DeckList from '../deck/deckList'
 
 const DeckRoute = ({deckNames, setDeckNames, showModal, toggleShowModal, showEditOrReview, toggleShowEditOrReview, showAddDeck, toggleShowAddDeck, deckID, setDeckID, editDeckRoute, reviewDeckRoute, increaseReviewedCount}) => {
-    const url = 'http://localhost:8080/api/decks'
+    const url = (import.meta.env.VITE_API_URL || '') + '/api/decks';
+
+    //const url = 'http://localhost:8080/api/decks'
     
     
     

@@ -4,7 +4,8 @@ import axios from 'axios'
 import FlashcardParent from '../flashcard/flashcardParent'
 
 const ReviewDeckRoute = ({deckID}) => {
-    const url = 'http://localhost:8080/api/deck/' + deckID
+    const url = (import.meta.env.VITE_API_URL || '') + '/api/deck/' + deckID;
+    //const url = 'http://localhost:8080/api/deck/' + deckID
 
     const [deckInfo, setDeckInfo] = React.useState([])
 

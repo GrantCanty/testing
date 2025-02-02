@@ -6,7 +6,8 @@ import EditFlashcard from "../editFlashcard/editFlashcard"
 import './editDeckRoute.css'
 
 const EditDeckRoute = ({deckNames, deckID}) => {
-    const url = "http://localhost:8080/api/deck/" + deckID
+    const url = (import.meta.env.VITE_API_URL || '') + '/api/deck/' + deckID;
+    //const url = "http://localhost:8080/api/deck/" + deckID
     
     const [deckInfo, setDeckInfo] = React.useState([])
 
