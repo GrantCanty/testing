@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	app_context "github.com/GrantCanty/testing/appContext"
+	app_context "github.com/GrantCanty/testing"
 )
 
 func GetDeckTitles(ac *app_context.AppContext) http.HandlerFunc {

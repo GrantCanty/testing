@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	app_context "github.com/GrantCanty/testing/appContext"
+	app_context "github.com/GrantCanty/testing"
 	"github.com/gorilla/mux"
 )
 

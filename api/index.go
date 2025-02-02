@@ -4,7 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	app_context "github.com/GrantCanty/testing/appContext"
+	ac "github.com/GrantCanty/testing/appContext"
+	"github.com/GrantCanty/testing/types"
 	"github.com/GrantCanty/testing/routes"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
@@ -25,7 +26,7 @@ func CorsMiddleware(next http.Handler) http.Handler {
 	})
 }
 
-var ctx app_context.AppContext
+var ctx ac.AppContext
 
 func init() {
 	ctx = app_context.NewAppContext()
@@ -38,19 +39,19 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	// Handle each route manually
 	switch {
 	case path == "decks" && r.Method == "GET":
-		routes.GetDeckTitles(&ctx)(w, r)
+		GetDeckTitles(&ctx)(w, r)
 	case strings.HasPrefix(path, "deck/") && r.Method == "GET":
-		routes.GetDeck(&ctx)(w, r)
+		GetDeck(&ctx)(w, r)
 	case strings.HasPrefix(path, "deck/") && r.Method == "POST":
-		routes.EditDeck(&ctx)(w, r)
+		EditDeck(&ctx)(w, r)
 	case path == "deck/" && r.Method == "POST":
-		routes.AddDeck(&ctx)(w, r)
+		AddDeck(&ctx)(w, r)
 	case path == "deckcount" && r.Method == "GET":
-		routes.GetDeckLength(&ctx)(w, r)
+		GetDeckLength(&ctx)(w, r)
 	case path == "user" && r.Method == "GET":
-		routes.GetProfileData(&ctx)(w, r)
+		GetProfileData(&ctx)(w, r)
 	case path == "occupations" && r.Method == "GET":
-		routes.GetOccupations(&ctx)(w, r)
+		GetOccupations(&ctx)(w, r)
 	default:
 		http.NotFound(w, r)
 		return

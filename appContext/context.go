@@ -1,4 +1,4 @@
-package app_context
+package appContext
 
 import (
 	"github.com/GrantCanty/testing/types"

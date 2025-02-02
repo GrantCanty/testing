@@ -3,7 +3,7 @@ package routes
 import (
 	"net/http"
 
-	app_context "github.com/GrantCanty/testing/appContext"
+	app_context "github.com/GrantCanty/testing"
 	"github.com/GrantCanty/testing/types"
 )
 
