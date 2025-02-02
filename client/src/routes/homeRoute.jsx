@@ -31,6 +31,9 @@ function HomeRoute(props) {
       setDeckData(response.data)
     })
   }, [])
+
+  console.log("homeRoute.jsx userData: ", userData)
+  console.log("homeRoute.jsx occupation: ", occupation)
   
   return (
       <>

@@ -19,6 +19,8 @@ const DeckRoute = ({deckNames, setDeckNames, showModal, toggleShowModal, showEdi
         })
     }, [setDeckNames])
 
+    console.log('deckRoute.jsx deckNames: ', deckNames)
+
     return (
         <>
             <div className='wrapper'>

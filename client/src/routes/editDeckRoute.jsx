@@ -17,6 +17,9 @@ const EditDeckRoute = ({deckNames, deckID}) => {
         })
     }, [url])
 
+    console.log('editDeckRoute.jsx deckInfo: ', deckInfo)
+
+
     function newCard() {
         const tmpDeck = new Map()
         tmpDeck.set("topic", "")

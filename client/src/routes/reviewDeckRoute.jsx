@@ -14,6 +14,8 @@ const ReviewDeckRoute = ({deckID}) => {
             setDeckInfo(response.data)
         })
     }, [url])
+
+    console.log("reviewDeckRoute.jsx deckInfo: ", deckInfo)
     
     return (
         <div className="wrapper">
