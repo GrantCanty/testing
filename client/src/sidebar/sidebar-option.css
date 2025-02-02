@@ -1,0 +1,12 @@
+.sidebar-option {
+    color: white;
+    padding: 5px;
+    font-size: .6em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.sidebar-option:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+}

@@ -1,0 +1,25 @@
+.wrapper {
+    margin-left: 60px;
+    padding: 1em;
+    height: 100%;
+}
+
+.app-data {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 auto;
+}
+
+.col {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    vertical-align: middle;
+}
+
+.rounded {
+    border: rgb(220,220,220) 2px solid;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px;
+}

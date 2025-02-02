@@ -1,0 +1,37 @@
+.flashcard {
+    aspect-ratio: .5;
+    display: table;
+    margin: 0 auto;
+    padding: 60px 60px 60px 60px;
+    /*vertical-align: middle;*/
+    border-radius: 35px;
+    
+    width: 20%;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.4);
+    
+    -webkit-touch-callout: none; 
+      -webkit-user-select: none; 
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.flashcard-info {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#disabled {
+    display: none;
+}
+
+button.new-card {
+    border-radius: 50% 50% 50% 50%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}

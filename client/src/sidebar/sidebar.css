@@ -1,0 +1,8 @@
+.sidebar-wrapper {
+    height: 100vh;
+    width: 60px;
+    background-color: rgb(50,50,53);
+    position: fixed;
+    left: 0;
+    top: 0;
+}

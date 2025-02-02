@@ -1,0 +1,44 @@
+.deck-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.deck-item {
+    flex: 25%;
+    color: white;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.deck-item:hover {
+    cursor: pointer;
+} 
+
+#id0 {
+    background-color: #FF4162;
+}
+
+#id1 {
+    background-color: #F2E50B;
+}
+
+#id2 {
+    background-color: #b44aff;
+}
+
+#id3 {
+    background-color: #17DEEE;
+}
+
+#id4 {
+    background-color: #21B20C;
+}
+
+#id5 {
+    background-color: #FF7F50;
+}

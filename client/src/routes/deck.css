@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    margin-left: 1em;
+    background-color: transparent;
+    border: 2px rgb(220,220,220) solid;
+    border-radius: 4px;
+    outline: transparent;
+    font-size: 1em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(220,220,220);
+}
