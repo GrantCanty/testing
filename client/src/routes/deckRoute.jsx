@@ -15,6 +15,7 @@ const DeckRoute = ({deckNames, setDeckNames, showModal, toggleShowModal, showEdi
     
     React.useEffect(() => {
         axios.get(url).then((response) => {
+            console.log('deckRoute.jsx url: ', url)
             console.log('deckRoute.jsx response: ', response)
             setDeckNames(new Map(Object.entries(response.data)))
         })

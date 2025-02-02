@@ -13,6 +13,7 @@ const EditDeckRoute = ({deckNames, deckID}) => {
 
     React.useEffect(() => {
         axios.get(url).then((response) => {
+            console.log('editDeckRoute.jsx url: ', url)
             console.log('editDeckRoute.jsx response: ', response)
             setDeckInfo(response.data)
         })
