@@ -1,6 +1,6 @@
 {
     "functions": {
-      "index.go": {
+      "main.go": {
         "runtime": "vercel-go@1.2.0"
       }
     }
