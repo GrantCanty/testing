@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	app_context "github.com/GrantCanty/flashcards/appContext"
-	"github.com/GrantCanty/flashcards/routes"
+	app_context "github.com/GrantCanty/testing/appContext"
+	"github.com/GrantCanty/testing/routes"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
